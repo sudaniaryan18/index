@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield Continental GT 650 - Flagship Showroom & Portal</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#e53935',
+                            darkred: '#991b1b',
+                            gold: '#d4af37',
+                            dark: '#0a0a0c',
+                            card: '#141418',
+                            cardHover: '#1d1d24',
+                            border: '#2a2a34'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0c; color: #f3f4f6; }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .red-gradient-text {
+            background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #991b1b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(20, 20, 24, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #0a0a0c; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #374151; border-radius: 3px; }
+        .animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-brand-dark min-h-screen text-gray-100 pb-16 custom-scrollbar">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md border-b border-brand-border px-4 lg:px-8 py-3.5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-darkred to-brand-red flex items-center justify-center shadow-lg shadow-red-900/40">
+                    <i class="fa-solid fa-motorcycle text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-black tracking-wider text-white uppercase flex items-center gap-2">
+                        ROYAL ENFIELD <span class="text-[10px] bg-red-600/20 text-red-400 px-2 py-0.5 rounded border border-red-500/30 font-bold">GT 650 STORE</span>
+                    </h1>
+                    <p class="text-[11px] text-gray-400">Continental GT 650 Flagship E-Showroom</p>
+                </div>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-6 text-xs font-semibold text-gray-300">
+                <a href="#bikes" class="hover:text-red-400 transition">Bikes & Photos</a>
+                <a href="#accessories" class="hover:text-red-400 transition">Accessories Store</a>
+                <a href="#credit" class="hover:text-red-400 transition">Credit & EMI Options</a>
+                <a href="#discounts" class="hover:text-red-400 transition">Discounts & Coupons</a>
+                <a href="#tradein" class="hover:text-red-400 transition">Exchange Bike</a>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <!-- Cart Button -->
+                <button onclick="toggleCartDrawer()" class="relative bg-brand-card hover:bg-brand-cardHover border border-brand-border p-2.5 rounded-xl text-gray-200 transition">
+                    <i class="fa-solid fa-cart-shopping text-base"></i>
+                    <span id="cartCountBadge" class="absolute -top-1.5 -right-1.5 bg-red-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center border border-black hidden">0</span>
+                </button>
+
+                <button onclick="openBookingModal()" class="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold px-4 py-2.5 rounded-xl text-xs shadow-lg shadow-red-600/30 flex items-center gap-2 transition transform active:scale-95">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Buy / Reserve GT 650</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 lg:px-8 pt-6 space-y-8">
+
+        <!-- Top Announcement Banner -->
+        <section class="glass-card rounded-2xl p-4 md:p-5 border border-brand-border flex flex-col md:flex-row items-center justify-between gap-4 relative overflow-hidden">
+            <div class="absolute -right-12 -top-12 w-48 h-48 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="flex items-center gap-4">
+                <div class="p-3 bg-red-500/10 rounded-2xl border border-red-500/20 text-red-400">
+                    <i class="fa-solid fa-tags text-2xl"></i>
+                </div>
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-red-400">Exclusive Online Offer</span>
+                    <h2 class="text-base md:text-lg font-bold text-white">Save up to ₹15,000 on GT 650 Booking + Instant ₹3,000 UPI Discount!</h2>
+                    <p class="text-xs text-gray-400">Use promo code <span class="bg-brand-card px-1.5 py-0.5 rounded font-mono text-yellow-400 border border-yellow-500/30">GTCLUB5000</span> or pay via UPI for extra cashback.</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3 w-full md:w-auto">
+                <button onclick="scrollToSection('discounts')" class="w-full md:w-auto bg-brand-card hover:bg-brand-cardHover border border-brand-border text-xs text-gray-200 px-4 py-2.5 rounded-xl font-semibold transition">
+                    View All Coupons
+                </button>
+                <button onclick="openBookingModal('upi')" class="w-full md:w-auto whitespace-nowrap bg-red-600/20 hover:bg-red-600/30 text-red-300 border border-red-500/30 text-xs px-4 py-2.5 rounded-xl font-semibold transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-qrcode text-yellow-400"></i>
+                    <span>Pay via UPI & Save</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Bike Showcase & Gallery Section -->
+        <section id="bikes" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 glass-card rounded-3xl p-6 border border-brand-border flex flex-col justify-between relative">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <span class="text-xs font-bold text-red-400 tracking-wider uppercase">Café Racer Legend</span>
+                        <h2 id="variantTitle" class="text-2xl md:text-3xl font-extrabold text-white">Continental GT 650 Apex Grey</h2>
+                        <p id="variantSubtitle" class="text-xs text-gray-400">Cast Alloy Wheels with Tubeless Tires & Dark Engine Finish</p>
+                    </div>
+                    <div class="text-right">
+                        <span class="text-xs text-gray-400">Ex-Showroom Price</span>
+                        <div id="exShowroomPrice" class="text-2xl font-black text-white">₹ 3,81,000</div>
+                        <span class="text-[10px] text-green-400 bg-green-500/10 px-2 py-0.5 rounded border border-green-500/20"><i class="fa-solid fa-circle-check text-[8px] mr-1"></i>Stock Available</span>
+                    </div>
+                </div>
+
+                <!-- Main Bike Image View -->
+                <div class="relative min-h-[300px] md:min-h-[380px] flex items-center justify-center my-2 group">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent rounded-2xl pointer-events-none"></div>
+                    <img id="bikeImage" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80" alt="Royal Enfield GT 650" class="max-h-[360px] w-auto object-contain rounded-2xl shadow-2xl transition-all duration-500 transform group-hover:scale-105">
+                    
+                    <div class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10 text-xs text-gray-300 flex items-center gap-2">
+                        <i class="fa-solid fa-camera text-red-400"></i>
+                        <span id="photoAngleLabel">Full Side View</span>
+                    </div>
+                </div>
+
+                <!-- Photo Angle Thumbnails Switcher -->
+                <div class="mb-4">
+                    <span class="text-[11px] font-semibold text-gray-400 mb-2 block">Switch Photo Angles:</span>
+                    <div class="flex gap-2.5 overflow-x-auto pb-1" id="photoAngleGrid">
+                        <!-- Populated by Javascript -->
+                    </div>
+                </div>
+
+                <!-- Color & Variant Selector -->
+                <div class="space-y-2.5 pt-3 border-t border-brand-border">
+                    <span class="text-xs font-semibold text-gray-300">Choose Color Variant:</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5" id="variantGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specs & Highlight Features -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="glass-card rounded-3xl p-6 border border-brand-border">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-gauge-high text-red-500"></i> Engine & Specs Sheet
+                    </h3>
+                    
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-brand-card p-3.5 rounded-2xl border border-brand-border">
+                            <i class="fa-solid fa-microchip text-red-400 text-lg mb-1"></i>
+                            <div class="text-[11px] text-gray-400">Engine Displacement</div>
+                            <div class="text-sm font-bold text-white">648 cc Parallel-Twin</div>
+                            <div class="text-[10px] text-gray-500">Air/Oil-Cooled SOHC</div>
+                        </div>
+                        <div class="bg-brand-card p-3.5 rounded-2xl border border-brand-border">
+                            <i class="fa-solid fa-bolt text-yellow-400 text-lg mb-1"></i>
+                            <div class="text-[11px] text-gray-400">Peak Power</div>
+                            <div class="text-sm font-bold text-white">47 PS @ 7250 RPM</div>
+                            <div class="text-[10px] text-gray-500">4 Valves per Cylinder</div>
+                        </div>
+                        <div class="bg-brand-card p-3.5 rounded-2xl border border-brand-border">
+                            <i class="fa-solid fa-fire text-orange-400 text-lg mb-1"></i>
+                            <div class="text-[11px] text-gray-400">Max Torque</div>
+                            <div class="text-sm font-bold text-white">52 Nm @ 5150 RPM</div>
+                            <div class="text-[10px] text-gray-500">80% Torque at 2500 RPM</div>
+                        </div>
+                        <div class="bg-brand-card p-3.5 rounded-2xl border border-brand-border">
+                            <i class="fa-solid fa-gears text-blue-400 text-lg mb-1"></i>
+                            <div class="text-[11px] text-gray-400">Gearbox</div>
+                            <div class="text-sm font-bold text-white">6-Speed Manual</div>
+                            <div class="text-[10px] text-gray-500">Slipper & Assist Clutch</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4 pt-4 border-t border-brand-border space-y-2 text-xs text-gray-300">
+                        <div class="flex justify-between">
+                            <span class="text-gray-400"><i class="fa-solid fa-shield-halved text-gray-500 mr-2"></i>Brakes & ABS:</span>
+                            <span class="font-semibold text-white">Dual-Channel ABS (ByBre 320mm/240mm)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400"><i class="fa-solid fa-gas-pump text-gray-500 mr-2"></i>Fuel Capacity:</span>
+                            <span class="font-semibold text-white">12.5 Liters (25 km/l Approx.)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400"><i class="fa-solid fa-weight-hanging text-gray-500 mr-2"></i>Kerb Weight:</span>
+                            <span class="font-semibold text-white">214 kg</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400"><i class="fa-solid fa-award text-gray-500 mr-2"></i>Factory Warranty:</span>
+                            <span class="font-semibold text-white">3 Years / Unlimited Km + Roadside Assist</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Back CTA Box -->
+                <div class="bg-gradient-to-br from-brand-card via-brand-card to-red-950/40 p-5 rounded-3xl border border-red-500/20 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Need Official Test Ride or Callback?</h4>
+                        <p class="text-xs text-gray-400">Connect with an authorized Royal Enfield dealer in 15 mins.</p>
+                    </div>
+                    <button onclick="triggerCallbackPrompt()" class="bg-white/10 hover:bg-white/20 text-white text-xs font-semibold px-4 py-2.5 rounded-xl border border-white/20 transition whitespace-nowrap">
+                        Request Call
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Accessories & Gear Store Section -->
+        <section id="accessories" class="glass-card rounded-3xl p-6 md:p-8 border border-brand-border">
+            <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-6">
+                <div>
+                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">E-Commerce Add-ons</span>
+                    <h2 class="text-2xl md:text-3xl font-black text-white">Official GT 650 Accessories & Apparel</h2>
+                    <p class="text-xs text-gray-400">Customize your bike with genuine Royal Enfield accessories and riding equipment.</p>
+                </div>
+                <button onclick="toggleCartDrawer()" class="bg-brand-card border border-brand-border text-xs px-4 py-2.5 rounded-xl text-yellow-400 font-semibold flex items-center gap-2">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span>View Shopping Cart (<span id="cartCountBtn">0</span>)</span>
+                </button>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="accessoriesGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Credit, EMI & Financing Portal -->
+        <section id="credit" class="glass-card rounded-3xl p-6 md:p-8 border border-brand-border">
+            <div class="flex flex-col md:flex-row justify-between md:items-end gap-4 mb-8">
+                <div>
+                    <span class="text-xs font-bold text-red-400 uppercase tracking-widest">Credit & Finance Estimator</span>
+                    <h2 class="text-2xl md:text-3xl font-black text-white">Calculate On-Road Price & Credit EMI</h2>
+                    <p class="text-xs text-gray-400">Low interest rates starting from 7.5% p.a. with top banking partners.</p>
+                </div>
+
+                <!-- Location Select for Taxes -->
+                <div class="w-full md:w-64">
+                    <label class="text-xs text-gray-400 mb-1 block">Select Location (RTO Tax Rate):</label>
+                    <select id="locationSelect" onchange="calculateFinancials()" class="w-full bg-brand-card border border-brand-border text-gray-200 text-xs rounded-xl px-3 py-2.5 focus:outline-none focus:border-red-500">
+                        <option value="1.12">Maharashtra / Mumbai (RTO ~12%)</option>
+                        <option value="1.10" selected>Delhi NCR (RTO ~10%)</option>
+                        <option value="1.14">Karnataka / Bengaluru (RTO ~14%)</option>
+                        <option value="1.11">Tamil Nadu / Chennai (RTO ~11%)</option>
+                        <option value="1.09">Gujarat / Ahmedabad (RTO ~9%)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <!-- Sliders -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-semibold text-gray-300">Down Payment Amount</label>
+                            <span id="downPaymentValDisplay" class="text-sm font-bold text-red-400">₹ 50,000</span>
+                        </div>
+                        <input type="range" id="downPaymentSlider" min="20000" max="300000" step="5000" value="50000" oninput="calculateFinancials()" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                            <span>Min: ₹ 20,000</span>
+                            <span>Max: ₹ 3,00,000</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-semibold text-gray-300">Loan Tenure (Months)</label>
+                            <span id="tenureValDisplay" class="text-sm font-bold text-red-400">36 Months (3 Years)</span>
+                        </div>
+                        <input type="range" id="tenureSlider" min="12" max="60" step="12" value="36" oninput="calculateFinancials()" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                            <span>1 Year (12m)</span>
+                            <span>3 Years (36m)</span>
+                            <span>5 Years (60m)</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-semibold text-gray-300">Bank Interest Rate (% p.a.)</label>
+                            <span id="interestValDisplay" class="text-sm font-bold text-red-400">9.5 %</span>
+                        </div>
+                        <input type="range" id="interestSlider" min="7.5" max="15.0" step="0.25" value="9.5" oninput="calculateFinancials()" class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-red-600">
+                        <div class="flex justify-between text-[10px] text-gray-500 mt-1">
+                            <span>7.5% Prime Rate</span>
+                            <span>15.0% Standard Rate</span>
+                        </div>
+                    </div>
+
+                    <!-- Credit Pre-Approval Tool Widget -->
+                    <div class="p-4 bg-brand-card rounded-2xl border border-red-500/30 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-xs font-bold text-white">
+                                <i class="fa-solid fa-credit-card text-yellow-400"></i>
+                                <span>Instant Credit Score Loan Pre-Approval</span>
+                            </div>
+                            <span class="text-[10px] bg-green-500/20 text-green-400 px-2 py-0.5 rounded border border-green-500/30">Instant Approval</span>
+                        </div>
+                        <p class="text-[11px] text-gray-400">Check if you qualify for zero down payment or pre-approved two-wheeler credit.</p>
+                        <div class="grid grid-cols-2 gap-2 text-xs">
+                            <input type="number" id="monthlyIncomeInput" placeholder="Monthly Income (₹)" class="bg-black/50 border border-brand-border px-3 py-2 rounded-xl text-white">
+                            <select id="creditScoreSelect" class="bg-black/50 border border-brand-border px-3 py-2 rounded-xl text-white">
+                                <option value="750">CIBIL Score: 750+ (Excellent)</option>
+                                <option value="700">CIBIL Score: 700 - 749 (Good)</option>
+                                <option value="650">CIBIL Score: 650 - 699 (Fair)</option>
+                            </select>
+                        </div>
+                        <button onclick="checkCreditApproval()" class="w-full bg-yellow-500/20 hover:bg-yellow-500/30 border border-yellow-500/40 text-yellow-300 text-xs font-bold py-2 rounded-xl transition">
+                            Check Credit Approval & Limits
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Price & EMI Summary Box -->
+                <div class="lg:col-span-5 bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4 border-b border-brand-border pb-2">Full Cost & Breakdown</h3>
+                        
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex justify-between text-gray-300">
+                                <span>Ex-Showroom Price:</span>
+                                <span id="sumExShowroom" class="font-bold text-white">₹ 3,81,000</span>
+                            </div>
+                            <div class="flex justify-between text-gray-300">
+                                <span>RTO Registration & Tax:</span>
+                                <span id="sumRto" class="font-semibold text-gray-200">₹ 38,100</span>
+                            </div>
+                            <div class="flex justify-between text-gray-300">
+                                <span>5-Yr Comprehensive Insurance:</span>
+                                <span id="sumInsurance" class="font-semibold text-gray-200">₹ 18,500</span>
+                            </div>
+                            <div class="flex justify-between text-gray-300">
+                                <span>Handling & RSA Charge:</span>
+                                <span class="font-semibold text-gray-200">₹ 3,500</span>
+                            </div>
+                            <div id="cartItemsCostRow" class="flex justify-between text-yellow-400 hidden font-semibold">
+                                <span>Added Accessories Cart:</span>
+                                <span id="cartItemsCostVal">+ ₹ 0</span>
+                            </div>
+                            <div id="appliedDiscountRow" class="flex justify-between text-green-400 hidden font-semibold">
+                                <span>Coupon Discount Applied:</span>
+                                <span id="appliedDiscountVal">- ₹ 0</span>
+                            </div>
+                            <div id="tradeInDiscountRow" class="flex justify-between text-green-400 hidden font-semibold">
+                                <span>Trade-in Credit Applied:</span>
+                                <span id="tradeInDiscountVal">- ₹ 0</span>
+                            </div>
+                            <div class="pt-2 border-t border-brand-border flex justify-between items-center">
+                                <span class="text-sm font-bold text-white">Total On-Road Price:</span>
+                                <span id="sumOnRoad" class="text-xl font-black text-red-400">₹ 4,41,100</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 p-3.5 rounded-xl bg-black/50 border border-brand-border space-y-1.5">
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-400">Loan Principal Amount:</span>
+                                <span id="sumLoanPrincipal" class="font-semibold text-white">₹ 3,91,100</span>
+                            </div>
+                            <div class="flex justify-between text-xs">
+                                <span class="text-gray-400">Total Loan Interest Payable:</span>
+                                <span id="sumTotalInterest" class="font-semibold text-yellow-400">₹ 60,200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-3 border-t border-brand-border">
+                        <div class="text-center bg-gradient-to-r from-red-950/60 via-brand-darkred/40 to-red-950/60 p-4 rounded-2xl border border-red-500/30">
+                            <span class="text-[10px] text-gray-300 uppercase tracking-widest font-semibold block">Calculated Monthly EMI</span>
+                            <div id="finalEmiDisplay" class="text-3xl font-black gold-gradient-text my-1">₹ 12,536 / mo</div>
+                            <span class="text-[10px] text-gray-400">Flexible Repayment Terms • Pre-payment Allowed</span>
+                        </div>
+
+                        <button onclick="openBookingModal('finance')" class="w-full mt-4 bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-xs transition shadow-lg shadow-red-600/30 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-file-signature"></i>
+                            <span>Apply Loan & Book GT 650</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discounts, Coupon Codes & Trade-in Section -->
+        <section id="discounts" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            <!-- Coupon Codes Card -->
+            <div class="lg:col-span-6 glass-card rounded-3xl p-6 border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-yellow-400 uppercase tracking-wider">Showroom Discounts</span>
+                            <h2 class="text-xl font-bold text-white">Available Promo Codes</h2>
+                        </div>
+                        <i class="fa-solid fa-gift text-yellow-400 text-2xl"></i>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-3.5 bg-brand-card rounded-2xl border border-yellow-500/30 flex items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-yellow-500/20 text-yellow-300 font-mono text-xs font-bold px-2 py-0.5 rounded border border-yellow-500/30">GTCLUB5000</span>
+                                    <span class="text-xs font-bold text-white">₹ 5,000 Off</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1">Free Genuine RE Helmet or Sump Guard with booking.</p>
+                            </div>
+                            <button onclick="applyCoupon('GTCLUB5000', 5000)" class="whitespace-nowrap text-xs bg-yellow-500/20 hover:bg-yellow-500/30 text-yellow-300 border border-yellow-500/40 px-3 py-1.5 rounded-lg font-semibold transition">
+                                Apply
+                            </button>
+                        </div>
+
+                        <div class="p-3.5 bg-brand-card rounded-2xl border border-green-500/30 flex items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-green-500/20 text-green-300 font-mono text-xs font-bold px-2 py-0.5 rounded border border-green-500/30">UPIPREMIUM</span>
+                                    <span class="text-xs font-bold text-white">₹ 3,000 Instant UPI Discount</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1">Instant price reduction when selecting UPI Payment.</p>
+                            </div>
+                            <button onclick="applyCoupon('UPIPREMIUM', 3000)" class="whitespace-nowrap text-xs bg-green-500/20 hover:bg-green-500/30 text-green-300 border border-green-500/40 px-3 py-1.5 rounded-lg font-semibold transition">
+                                Apply
+                            </button>
+                        </div>
+
+                        <div class="p-3.5 bg-brand-card rounded-2xl border border-red-500/30 flex items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="bg-red-500/20 text-red-300 font-mono text-xs font-bold px-2 py-0.5 rounded border border-red-500/30">EXCHANGE10K</span>
+                                    <span class="text-xs font-bold text-white">₹ 10,000 Trade Bonus</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1">Top-up bonus when exchanging any old motorcycle.</p>
+                            </div>
+                            <button onclick="applyCoupon('EXCHANGE10K', 10000)" class="whitespace-nowrap text-xs bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 px-3 py-1.5 rounded-lg font-semibold transition">
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-brand-border flex gap-2">
+                    <input type="text" id="customCouponInput" placeholder="Enter custom coupon code..." class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2 text-white uppercase focus:outline-none focus:border-red-500">
+                    <button onclick="applyManualCoupon()" class="bg-brand-cardHover hover:bg-gray-800 text-xs px-4 py-2 rounded-xl border border-brand-border font-semibold text-gray-200">
+                        Apply
+                    </button>
+                </div>
+            </div>
+
+            <!-- Trade-In Bike Valuation Card -->
+            <div id="tradein" class="lg:col-span-6 glass-card rounded-3xl p-6 border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-green-400 uppercase tracking-wider">Old Bike Upgrade</span>
+                            <h2 class="text-xl font-bold text-white">Trade-In Exchange Estimator</h2>
+                        </div>
+                        <i class="fa-solid fa-arrows-rotate text-green-400 text-2xl"></i>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div>
+                            <label class="text-xs text-gray-400 mb-1 block">Your Existing Motorcycle Model:</label>
+                            <input type="text" id="tradeBikeModel" placeholder="e.g. Classic 350, Pulsar 220, Duke 200..." class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-red-500">
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-3">
+                            <div>
+                                <label class="text-xs text-gray-400 mb-1 block">Registration Year:</label>
+                                <select id="tradeYear" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none">
+                                    <option value="2023">2023 or newer</option>
+                                    <option value="2021">2021 - 2022</option>
+                                    <option value="2019" selected>2019 - 2020</option>
+                                    <option value="2016">2016 - 2018</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="text-xs text-gray-400 mb-1 block">Kilometers Driven:</label>
+                                <select id="tradeKm" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none">
+                                    <option value="low">Under 15,000 km</option>
+                                    <option value="med" selected>15,000 - 35,000 km</option>
+                                    <option value="high">Above 35,000 km</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="text-xs text-gray-400 mb-1 block">Overall Condition:</label>
+                            <select id="tradeCondition" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none">
+                                <option value="excellent">Excellent (Scratchless, Well Maintained)</option>
+                                <option value="good" selected>Good (Minor wear & tear)</option>
+                                <option value="fair">Fair (Needs slight repairs)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 pt-4 border-t border-brand-border flex items-center justify-between">
+                    <div>
+                        <span class="text-[10px] text-gray-400 uppercase block">Estimated Exchange Credit</span>
+                        <div id="tradeValuationDisplay" class="text-xl font-bold text-green-400">₹ 50,000</div>
+                    </div>
+                    <button onclick="calculateTradeIn()" class="bg-green-600 hover:bg-green-500 text-white text-xs px-4 py-2.5 rounded-xl font-semibold transition flex items-center gap-2">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Apply Trade-In Credit</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cartDrawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex justify-end">
+        <div class="glass-card w-full max-w-md h-full p-6 flex flex-col justify-between border-l border-brand-border animate-fade-in">
+            <div>
+                <div class="flex items-center justify-between mb-6 pb-3 border-b border-brand-border">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-bag-shopping text-red-500"></i> Your Accessories Cart
+                    </h3>
+                    <button onclick="toggleCartDrawer()" class="text-gray-400 hover:text-white text-xl">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div id="cartItemsList" class="space-y-3 max-h-[60vh] overflow-y-auto custom-scrollbar">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="pt-4 border-t border-brand-border space-y-3">
+                <div class="flex justify-between text-sm font-bold">
+                    <span class="text-gray-300">Total Accessories Cost:</span>
+                    <span id="cartDrawerTotal" class="text-yellow-400">₹ 0</span>
+                </div>
+                <button onclick="toggleCartDrawer(); openBookingModal();" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-3 rounded-xl text-xs transition">
+                    Proceed to Booking & Pay
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking & Payment Gateway Modal -->
+    <div id="bookingModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="glass-card w-full max-w-2xl rounded-3xl border border-brand-border p-6 md:p-8 relative max-h-[90vh] overflow-y-auto custom-scrollbar animate-fade-in">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-red-600/20 border border-red-500/30 flex items-center justify-center text-red-400">
+                    <i class="fa-solid fa-shield-check text-lg"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Reserve Continental GT 650</h3>
+                    <p class="text-xs text-gray-400">Official Royal Enfield Dealership Digital Direct Booking</p>
+                </div>
+            </div>
+
+            <form id="bookingForm" onsubmit="handlePaymentSubmit(event)" class="space-y-5">
+                <!-- Summary Overview -->
+                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border text-xs space-y-2">
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">Selected Motorcycle Variant:</span>
+                        <span id="modalVariantTitle" class="font-bold text-white">GT 650 Apex Grey</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-gray-400">Total On-Road Price:</span>
+                        <span id="modalOnRoadPrice" class="font-bold text-red-400">₹ 4,41,100</span>
+                    </div>
+                    <div class="flex justify-between border-t border-brand-border pt-2">
+                        <span class="text-gray-300 font-semibold">Token Booking Amount Payable Now:</span>
+                        <span id="modalBookingAmount" class="font-black text-green-400 text-sm">₹ 5,000</span>
+                    </div>
+                </div>
+
+                <!-- Customer Info -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div>
+                        <label class="text-xs text-gray-400 mb-1 block">Full Name *</label>
+                        <input type="text" required placeholder="e.g. Rahul Sharma" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="text-xs text-gray-400 mb-1 block">Mobile Number *</label>
+                        <input type="tel" required placeholder="+91 9876543210" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="text-xs text-gray-400 mb-1 block">Email Address *</label>
+                        <input type="email" required placeholder="rahul@example.com" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-red-500">
+                    </div>
+                    <div>
+                        <label class="text-xs text-gray-400 mb-1 block">Preferred Showroom City *</label>
+                        <input type="text" required placeholder="e.g. Delhi NCR / Mumbai" class="w-full bg-brand-card border border-brand-border text-xs rounded-xl px-3 py-2.5 text-white focus:outline-none focus:border-red-500">
+                    </div>
+                </div>
+
+                <!-- Payment Selection Tabs -->
+                <div>
+                    <label class="text-xs font-semibold text-gray-300 mb-2 block">Choose Payment Method:</label>
+                    <div class="grid grid-cols-3 gap-2" id="paymentMethodGrid">
+                        <button type="button" onclick="selectPaymentMethod('upi')" id="pm-upi" class="p-3 bg-red-600/20 border border-red-500 text-white rounded-xl text-xs font-semibold flex flex-col items-center gap-1">
+                            <i class="fa-solid fa-qrcode text-lg text-yellow-400"></i>
+                            <span>UPI / QR</span>
+                        </button>
+                        <button type="button" onclick="selectPaymentMethod('card')" id="pm-card" class="p-3 bg-brand-card border border-brand-border text-gray-300 rounded-xl text-xs font-semibold flex flex-col items-center gap-1 hover:border-gray-500">
+                            <i class="fa-solid fa-credit-card text-lg text-blue-400"></i>
+                            <span>Credit Card</span>
+                        </button>
+                        <button type="button" onclick="selectPaymentMethod('netbanking')" id="pm-netbanking" class="p-3 bg-brand-card border border-brand-border text-gray-300 rounded-xl text-xs font-semibold flex flex-col items-center gap-1 hover:border-gray-500">
+                            <i class="fa-solid fa-building-columns text-lg text-green-400"></i>
+                            <span>NetBanking</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Payment Method Sub-panels -->
+                <!-- UPI Panel -->
+                <div id="upiFields" class="p-4 bg-brand-card rounded-2xl border border-brand-border flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="space-y-2 w-full md:w-auto">
+                        <span class="text-xs font-bold text-white block">Scan & Pay via any UPI App:</span>
+                        <div class="flex gap-2">
+                            <span class="bg-black/50 text-[10px] text-gray-300 px-2 py-1 rounded border border-gray-700"><i class="fa-brands fa-google-pay mr-1 text-blue-400"></i>Google Pay</span>
+                            <span class="bg-black/50 text-[10px] text-gray-300 px-2 py-1 rounded border border-gray-700">PhonePe</span>
+                            <span class="bg-black/50 text-[10px] text-gray-300 px-2 py-1 rounded border border-gray-700">Paytm</span>
+                        </div>
+                        <div class="text-xs text-yellow-400 font-mono pt-1">UPI ID: royalenfield.gt650@icici</div>
+                        <input type="text" placeholder="Or enter your VPA / UPI ID (e.g. user@okaxis)" class="w-full bg-black/50 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                    </div>
+                    <div class="w-24 h-24 bg-white p-2 rounded-2xl flex flex-col items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-qrcode text-6xl text-black"></i>
+                    </div>
+                </div>
+
+                <!-- Credit Card Panel -->
+                <div id="cardFields" class="p-4 bg-brand-card rounded-2xl border border-brand-border space-y-3 hidden">
+                    <input type="text" placeholder="Cardholder Name" class="w-full bg-black/40 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                    <input type="text" placeholder="Card Number (16 Digits)" class="w-full bg-black/40 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="text" placeholder="MM / YY" class="w-full bg-black/40 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                        <input type="password" placeholder="CVV" class="w-full bg-black/40 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                    </div>
+                    <div class="flex items-center gap-2 pt-1">
+                        <input type="checkbox" id="cardEmiCheck" class="rounded border-gray-700">
+                        <label for="cardEmiCheck" class="text-xs text-gray-300">Convert this payment to No-Cost Credit Card EMI</label>
+                    </div>
+                </div>
+
+                <!-- NetBanking Panel -->
+                <div id="netbankingFields" class="p-4 bg-brand-card rounded-2xl border border-brand-border hidden">
+                    <label class="text-xs text-gray-400 mb-1 block">Select Your NetBanking Institution:</label>
+                    <select class="w-full bg-black/40 border border-brand-border text-xs rounded-xl px-3 py-2 text-white">
+                        <option>HDFC Bank NetBanking</option>
+                        <option>ICICI Bank Retail</option>
+                        <option>State Bank of India (SBI)</option>
+                        <option>Axis Bank Corporate/Retail</option>
+                        <option>Kotak Mahindra Bank</option>
+                    </select>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-3.5 rounded-xl text-sm transition shadow-lg shadow-green-600/30 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-lock"></i>
+                    <span id="payBtnText">Pay Token Amount ₹5,000 & Confirm Reserve</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Booking Receipt Modal -->
+    <div id="receiptModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="glass-card w-full max-w-md rounded-3xl border border-green-500/40 p-6 text-center space-y-4 animate-fade-in">
+            <div class="w-16 h-16 bg-green-500/20 text-green-400 rounded-full flex items-center justify-center text-3xl mx-auto border border-green-500/40">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-2xl font-black text-white">Booking Confirmed!</h3>
+            <p class="text-xs text-gray-300">Your Royal Enfield Continental GT 650 order has been registered.</p>
+
+            <div class="bg-brand-card p-4 rounded-2xl border border-brand-border text-left text-xs space-y-2 font-mono">
+                <div class="flex justify-between text-gray-400">
+                    <span>Booking ID:</span>
+                    <span id="recBookingId" class="text-white font-bold">RE-GT-88219</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Variant:</span>
+                    <span id="recVariant" class="text-white">GT 650 Apex Grey</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Token Amount Paid:</span>
+                    <span class="text-green-400 font-bold">₹ 5,000</span>
+                </div>
+                <div class="flex justify-between text-gray-400">
+                    <span>Payment Status:</span>
+                    <span class="text-green-400 font-bold">SUCCESSFUL</span>
+                </div>
+            </div>
+
+            <p class="text-[11px] text-gray-400">An official showroom representative will contact you for document submission and test-ride scheduling.</p>
+
+            <button onclick="closeReceiptModal()" class="w-full bg-brand-card hover:bg-brand-cardHover border border-brand-border text-white text-xs font-bold py-3 rounded-xl transition">
+                Close & Return to Showroom
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Bike Variant Photos & Spec Data
+        const variants = [
+            {
+                id: 'apex_grey',
+                name: 'Apex Grey',
+                subtitle: 'Cast Alloy Wheels • Tubeless Tires • Dark Blacked-out Engine',
+                price: 381000,
+                colorClass: 'bg-gray-600',
+                photos: [
+                    { name: 'Full Side View', url: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80' },
+                    { name: 'Front Cockpit', url: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1000&q=80' },
+                    { name: 'Engine Detail', url: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80' }
+                ]
+            },
+            {
+                id: 'slipstream_blue',
+                name: 'Slipstream Blue',
+                subtitle: 'Cast Alloy Wheels • Racing Stripes • Dark Engine Finish',
+                price: 381000,
+                colorClass: 'bg-blue-600',
+                photos: [
+                    { name: 'Full Side View', url: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=1000&q=80' },
+                    { name: 'Rider Perspective', url: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=80' }
+                ]
+            },
+            {
+                id: 'mr_clean',
+                name: 'Mr Clean (Chrome)',
+                subtitle: 'Full Chrome Tank • Classic Spoke Wheels • Polished Engine',
+                price: 388000,
+                colorClass: 'bg-slate-300',
+                photos: [
+                    { name: 'Full Side Chrome', url: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1000&q=80' },
+                    { name: 'Exhaust View', url: 'https://images.unsplash.com/photo-1558980860-26249f863b1d?auto=format&fit=crop&w=1000&q=80' }
+                ]
+            },
+            {
+                id: 'rocker_red',
+                name: 'Rocker Red',
+                subtitle: 'Heritage Café Red • Spoke Wheels • Classic Twin Exhaust',
+                price: 358427,
+                colorClass: 'bg-red-600',
+                photos: [
+                    { name: 'Heritage Red View', url: 'https://images.unsplash.com/photo-1558980860-26249f863b1d?auto=format&fit=crop&w=1000&q=80' }
+                ]
+            }
+        ];
+
+        // E-Commerce Accessories Catalog
+        const accessoriesList = [
+            { id: 'acc_1', name: 'Bar-End Touring Mirrors', price: 6450, icon: 'fa-eye', img: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=400&q=80' },
+            { id: 'acc_2', name: 'Aluminium Sump Guard', price: 3450, icon: 'fa-shield', img: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=400&q=80' },
+            { id: 'acc_3', name: 'Compact Engine Guard', price: 4200, icon: 'fa-lock', img: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=400&q=80' },
+            { id: 'acc_4', name: 'GT Leather Riding Jacket', price: 12500, icon: 'fa-vest', img: 'https://images.unsplash.com/photo-1558980860-26249f863b1d?auto=format&fit=crop&w=400&q=80' }
+        ];
+
+        let selectedVariant = variants[0];
+        let currentPhotoIndex = 0;
+        let appliedDiscount = 0;
+        let tradeInCredit = 0;
+        let cart = [];
+
+        // DOM Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            renderVariantGrid();
+            renderPhotoAngles();
+            renderAccessories();
+            calculateFinancials();
+        });
+
+        function renderVariantGrid() {
+            const grid = document.getElementById('variantGrid');
+            grid.innerHTML = variants.map(v => `
+                <button onclick="selectVariant('${v.id}')" class="p-2.5 rounded-xl border text-left transition flex items-center gap-2 ${selectedVariant.id === v.id ? 'border-red-500 bg-red-950/20' : 'border-brand-border bg-brand-card hover:border-gray-600'}">
+                    <span class="w-3.5 h-3.5 rounded-full ${v.colorClass} border border-white/30 flex-shrink-0"></span>
+                    <div class="truncate">
+                        <div class="text-xs font-bold text-white truncate">${v.name}</div>
+                        <div class="text-[10px] text-gray-400">₹ ${(v.price/100000).toFixed(2)} Lakh</div>
+                    </div>
+                </button>
+            `).join('');
+        }
+
+        function renderPhotoAngles() {
+            const grid = document.getElementById('photoAngleGrid');
+            grid.innerHTML = selectedVariant.photos.map((p, idx) => `
+                <button onclick="switchPhotoAngle(${idx})" class="px-3 py-1.5 rounded-lg border text-xs font-semibold whitespace-nowrap transition ${currentPhotoIndex === idx ? 'border-red-500 bg-red-600/20 text-white' : 'border-brand-border bg-brand-card text-gray-400 hover:text-white'}">
+                    ${p.name}
+                </button>
+            `).join('');
+            document.getElementById('photoAngleLabel').innerText = selectedVariant.photos[currentPhotoIndex].name;
+            document.getElementById('bikeImage').src = selectedVariant.photos[currentPhotoIndex].url;
+        }
+
+        function switchPhotoAngle(index) {
+            currentPhotoIndex = index;
+            renderPhotoAngles();
+        }
+
+        function selectVariant(id) {
+            selectedVariant = variants.find(v => v.id === id);
+            currentPhotoIndex = 0;
+            document.getElementById('variantTitle').innerText = `Continental GT 650 ${selectedVariant.name}`;
+            document.getElementById('variantSubtitle').innerText = selectedVariant.subtitle;
+            document.getElementById('exShowroomPrice').innerText = `₹ ${selectedVariant.price.toLocaleString('en-IN')}`;
+            
+            renderVariantGrid();
+            renderPhotoAngles();
+            calculateFinancials();
+        }
+
+        function renderAccessories() {
+            const grid = document.getElementById('accessoriesGrid');
+            grid.innerHTML = accessoriesList.map(acc => `
+                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border flex flex-col justify-between space-y-3">
+                    <div>
+                        <div class="w-full h-28 bg-black/50 rounded-xl mb-3 overflow-hidden">
+                            <img src="${acc.img}" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xs font-bold text-white">${acc.name}</h4>
+                        <div class="text-sm font-black text-yellow-400 my-1">₹ ${acc.price.toLocaleString('en-IN')}</div>
+                    </div>
+                    <button onclick="addToCart('${acc.id}')" class="w-full bg-brand-cardHover hover:bg-red-600/20 border border-brand-border hover:border-red-500 text-xs font-bold py-2 rounded-xl text-gray-200 hover:text-white transition flex items-center justify-center gap-1.5">
+                        <i class="fa-solid fa-plus text-[10px]"></i>
+                        <span>Add to Cart</span>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(accId) {
+            const item = accessoriesList.find(a => a.id === accId);
+            cart.push(item);
+            updateCartUI();
+            showToast(`Added ${item.name} to cart!`);
+        }
+
+        function updateCartUI() {
+            document.getElementById('cartCountBadge').innerText = cart.length;
+            document.getElementById('cartCountBtn').innerText = cart.length;
+            if (cart.length > 0) document.getElementById('cartCountBadge').classList.remove('hidden');
+            else document.getElementById('cartCountBadge').classList.add('hidden');
+
+            const list = document.getElementById('cartItemsList');
+            if (cart.length === 0) {
+                list.innerHTML = `<p class="text-xs text-gray-500 text-center py-6">Your cart is empty.</p>`;
+            } else {
+                list.innerHTML = cart.map((item, idx) => `
+                    <div class="p-3 bg-brand-card rounded-xl border border-brand-border flex items-center justify-between">
+                        <div>
+                            <div class="text-xs font-bold text-white">${item.name}</div>
+                            <div class="text-xs text-yellow-400">₹ ${item.price.toLocaleString('en-IN')}</div>
+                        </div>
+                        <button onclick="removeFromCart(${idx})" class="text-gray-500 hover:text-red-400 text-xs">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cartDrawerTotal').innerText = `₹ ${total.toLocaleString('en-IN')}`;
+            calculateFinancials();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function toggleCartDrawer() {
+            document.getElementById('cartDrawer').classList.toggle('hidden');
+        }
+
+        function calculateFinancials() {
+            const exPrice = selectedVariant.price;
+            const rtoMultiplier = parseFloat(document.getElementById('locationSelect').value);
+            
+            const rtoTax = Math.round(exPrice * (rtoMultiplier - 1));
+            const insurance = 18500;
+            const handling = 3500;
+            const accessoriesTotal = cart.reduce((sum, item) => sum + item.price, 0);
+
+            if (accessoriesTotal > 0) {
+                document.getElementById('cartItemsCostRow').classList.remove('hidden');
+                document.getElementById('cartItemsCostVal').innerText = `+ ₹ ${accessoriesTotal.toLocaleString('en-IN')}`;
+            } else {
+                document.getElementById('cartItemsCostRow').classList.add('hidden');
+            }
+
+            const grossOnRoad = exPrice + rtoTax + insurance + handling + accessoriesTotal;
+            const netOnRoad = Math.max(0, grossOnRoad - appliedDiscount - tradeInCredit);
+
+            // Slider Calculations
+            const downPayment = parseInt(document.getElementById('downPaymentSlider').value);
+            const tenureMonths = parseInt(document.getElementById('tenureSlider').value);
+            const interestRate = parseFloat(document.getElementById('interestSlider').value);
+
+            document.getElementById('downPaymentValDisplay').innerText = `₹ ${downPayment.toLocaleString('en-IN')}`;
+            document.getElementById('tenureValDisplay').innerText = `${tenureMonths} Months (${tenureMonths/12} Yrs)`;
+            document.getElementById('interestValDisplay').innerText = `${interestRate.toFixed(2)} %`;
+
+            document.getElementById('sumExShowroom').innerText = `₹ ${exPrice.toLocaleString('en-IN')}`;
+            document.getElementById('sumRto').innerText = `₹ ${rtoTax.toLocaleString('en-IN')}`;
+            document.getElementById('sumInsurance').innerText = `₹ ${insurance.toLocaleString('en-IN')}`;
+            document.getElementById('sumOnRoad').innerText = `₹ ${netOnRoad.toLocaleString('en-IN')}`;
+
+            const principal = Math.max(0, netOnRoad - downPayment);
+            document.getElementById('sumLoanPrincipal').innerText = `₹ ${principal.toLocaleString('en-IN')}`;
+
+            const r = interestRate / 12 / 100;
+            let emi = 0;
+            let totalInterest = 0;
+
+            if (principal > 0 && r > 0) {
+                emi = Math.round((principal * r * Math.pow(1 + r, tenureMonths)) / (Math.pow(1 + r, tenureMonths) - 1));
+                totalInterest = Math.round((emi * tenureMonths) - principal);
+            }
+
+            document.getElementById('sumTotalInterest').innerText = `₹ ${totalInterest.toLocaleString('en-IN')}`;
+            document.getElementById('finalEmiDisplay').innerText = `₹ ${emi.toLocaleString('en-IN')} / mo`;
+        }
+
+        function checkCreditApproval() {
+            const income = parseFloat(document.getElementById('monthlyIncomeInput').value);
+            const score = parseInt(document.getElementById('creditScoreSelect').value);
+
+            if (!income || income < 15000) {
+                showToast('Please enter a valid monthly income above ₹15,000');
+                return;
+            }
+
+            if (score >= 750) {
+                showToast('Pre-Approval Success! You qualify for Zero Down Payment & 7.5% Interest Rate.');
+                document.getElementById('interestSlider').value = "7.5";
+            } else {
+                showToast('Credit check approved for Standard EMI financing plan.');
+            }
+            calculateFinancials();
+        }
+
+        function applyCoupon(code, amount) {
+            appliedDiscount = amount;
+            document.getElementById('appliedDiscountRow').classList.remove('hidden');
+            document.getElementById('appliedDiscountVal').innerText = `- ₹ ${amount.toLocaleString('en-IN')}`;
+            calculateFinancials();
+            showToast(`Coupon ${code} applied successfully! Saved ₹${amount.toLocaleString('en-IN')}`);
+        }
+
+        function applyManualCoupon() {
+            const input = document.getElementById('customCouponInput').value.trim().toUpperCase();
+            if (input === 'GTCLUB5000') applyCoupon('GTCLUB5000', 5000);
+            else if (input === 'UPIPREMIUM') applyCoupon('UPIPREMIUM', 3000);
+            else if (input === 'EXCHANGE10K') applyCoupon('EXCHANGE10K', 10000);
+            else if (input.length > 0) applyCoupon(input, 2500);
+        }
+
+        function calculateTradeIn() {
+            const model = document.getElementById('tradeBikeModel').value.trim();
+            if (!model) {
+                showToast('Please enter your existing bike model name');
+                return;
+            }
+            tradeInCredit = 50000;
+            document.getElementById('tradeInDiscountRow').classList.remove('hidden');
+            document.getElementById('tradeInDiscountVal').innerText = `- ₹ ${tradeInCredit.toLocaleString('en-IN')}`;
+            document.getElementById('tradeValuationDisplay').innerText = `₹ ${tradeInCredit.toLocaleString('en-IN')}`;
+            calculateFinancials();
+            showToast(`Trade-in valuation completed for ${model}! Credit applied.`);
+        }
+
+        function openBookingModal(defaultMethod = 'upi') {
+            document.getElementById('modalVariantTitle').innerText = `GT 650 ${selectedVariant.name}`;
+            document.getElementById('modalOnRoadPrice').innerText = document.getElementById('sumOnRoad').innerText;
+            selectPaymentMethod(defaultMethod);
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        function selectPaymentMethod(method) {
+            ['upi', 'card', 'netbanking'].forEach(m => {
+                const btn = document.getElementById(`pm-${m}`);
+                const field = document.getElementById(`${m}Fields`);
+                if (m === method) {
+                    btn.classList.add('bg-red-600/20', 'border-red-500', 'text-white');
+                    btn.classList.remove('bg-brand-card', 'border-brand-border', 'text-gray-300');
+                    field.classList.remove('hidden');
+                } else {
+                    btn.classList.remove('bg-red-600/20', 'border-red-500', 'text-white');
+                    btn.classList.add('bg-brand-card', 'border-brand-border', 'text-gray-300');
+                    field.classList.add('hidden');
+                }
+            });
+        }
+
+        function handlePaymentSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            document.getElementById('recBookingId').innerText = `RE-GT-${Math.floor(10000 + Math.random() * 90000)}`;
+            document.getElementById('recVariant').innerText = `GT 650 ${selectedVariant.name}`;
+            document.getElementById('receiptModal').classList.remove('hidden');
+        }
+
+        function closeReceiptModal() {
+            document.getElementById('receiptModal').classList.add('hidden');
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function triggerCallbackPrompt() {
+            showToast('Callback requested! Our executive will contact you in 15 mins.');
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-5 right-5 z-50 bg-red-600 text-white text-xs font-bold px-4 py-3 rounded-xl shadow-2xl border border-red-400 animate-fade-in';
+            toast.innerText = msg;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3200);
+        }
+    </script>
+</body>
+</html>
